@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Example 4</title>
+  </head>
+  <body>
+    <section id="craig-shoemaker" class="card dark">
+      <h1>Craig Shoemaker</h1>
+      <ul>
+        <li><a href="#" class="tag">Twitter</a></li>
+        <li><a href="#" class="tag">Github</a></li>
+      </ul>
+    </section>
+    <section id="john-papa" class="card">
+      <h1>John Papa</h1>
+      <ul>
+        <li><a href="#" class="tag">Twitter</a></li>
+        <li><a href="#" class="tag">Github</a></li>
+      </ul>
+    </section>
+    <script>
+      let links = document.querySelectorAll(".tag");
+      links.forEach(function (link) {
+        link.setAttribute("target", "_blank");
+      });
+    </script>
+  </body>
+</html>

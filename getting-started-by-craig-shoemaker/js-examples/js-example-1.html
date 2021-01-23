@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Example 1</title>
+  </head>
+  <body>
+    <script>
+      function greet(name) {
+        let result = "";
+        if (name === "Craig") {
+          result = "Hi Craig";
+        } else if (name === "Tyler") {
+          result = "Tyler, is that you?";
+        } else {
+          result = "Wait, where's Craig?";
+        }
+        return result;
+      }
+      let message = greet("Craig");
+      console.log(message);
+      console.log("Type in:");
+      console.log('greet("Tyler")');
+      console.log("OR");
+      console.log('greet("Jacob")');
+    </script>
+  </body>
+</html>

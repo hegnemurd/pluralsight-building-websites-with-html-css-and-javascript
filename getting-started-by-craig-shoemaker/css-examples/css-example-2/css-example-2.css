@@ -1,0 +1,24 @@
+h1,
+h2 {
+  color: rgb(248, 0, 215);
+}
+img {
+  border: solid 1px #777;
+}
+.tutorial,
+h1 {
+  border: dotted 3px #ffee00;
+}
+.tutorial {
+  border: solid 1px rgb(0, 0, 247);
+}
+#tutorial-1 {
+  background-color: #eee;
+}
+img[src="https://via.placeholder.com/150"]
+{
+  border: dashed 2px #34d87e;
+}
+.tutorial > p {
+  font-size: 1.5em;
+}

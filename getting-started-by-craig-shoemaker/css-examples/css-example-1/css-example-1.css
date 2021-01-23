@@ -1,0 +1,16 @@
+h1 {
+  background-color: bisque;
+  color: royalblue;
+}
+div {
+  background-color: skyblue;
+  color: slategray;
+}
+.class-attr {
+  background-color: springgreen;
+  color: white;
+}
+#id-attr {
+  background-color: hotpink;
+  color: honeydew;
+}

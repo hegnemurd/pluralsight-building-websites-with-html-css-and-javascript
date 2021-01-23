@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Example 3</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      let max = 10;
+      while (count < max) {
+        console.log(count);
+        count = count + 1;
+      }
+
+      let numbers = ["Hello", 46, true];
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+      }
+
+      let days = ["Mon", "Tue", "Wed"];
+
+      days.forEach(function (day, index) {
+        console.log(`day: ${day}, index: ${index}`);
+      });
+    </script>
+  </body>
+</html>

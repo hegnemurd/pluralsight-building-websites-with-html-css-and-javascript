@@ -1,0 +1,13 @@
+.columns {
+  border: solid 1px #39f;
+  display: flex;
+}
+
+.columns > div {
+  border: solid 1px #ccc;
+  flex: 1;
+}
+
+.columns > div:nth-of-type(2) {
+  flex: 2;
+}
