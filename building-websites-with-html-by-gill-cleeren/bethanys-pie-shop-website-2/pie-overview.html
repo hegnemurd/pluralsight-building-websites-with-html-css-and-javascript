@@ -63,6 +63,13 @@
       figure {
         display: block;
       }
+
+      table,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
     </style>
   </head>
   <body>
@@ -86,7 +93,19 @@
         />
       </aside>
       <main id="main">
-        <table border="1">
+        <table>
+          <caption>
+            Our delicious selection of pies for you to enjoy!
+          </caption>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Pie Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Details</th>
+            </tr>
+          </thead>
           <tr>
             <td>
               <img
