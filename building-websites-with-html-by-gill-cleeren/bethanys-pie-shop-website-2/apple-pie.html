@@ -64,13 +64,36 @@
       figure {
         display: block;
       }
+
+      nav > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav > ul > li {
+        float: left;
+      }
+
+      nav > ul > li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-weight: bold;
+      }
     </style>
   </head>
 
   <body>
     <header id="main-header">
       <nav>
-        <img src="images/cake.svg" height="55" />
+        <ul>
+          <li><img src="./images/cake.svg" height="55" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pie-overview.html">All pies</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -91,17 +114,19 @@
           <header>
             <h1 style="font-size: 35px; color: #a593c2">Apple pie</h1>
           </header>
+
           <figure>
-            <img
-              src="./images/products/applepie.jpg"
-              width="600"
-              alt="Apple pie"
-            />
+            <a href="./images/products/applepie.jpg"
+              ><img
+                src="./images/products/applepie.jpg"
+                width="600"
+                alt="Apple pie"
+            /></a>
             <figcaption>Our world-famous apple pie</figcaption>
           </figure>
 
           <div style="background-color: #f8f4f1">
-            <strong>Price: $12.95</strong>
+            <strong>Price: £12.95</strong>
             <h2>Description</h2>
             <p>
               Bethany received the recipe for this delicious apple pie from her
@@ -160,6 +185,7 @@
                 ready, we let it cool on a wire rack.
               </li>
             </ol>
+
             <ol start="5">
               <li>If something goes wrong, we start all over again!</li>
             </ol>

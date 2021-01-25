@@ -63,13 +63,36 @@
       figure {
         display: block;
       }
+
+      nav > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav > ul > li {
+        float: left;
+      }
+
+      nav > ul > li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <header id="main-header">
       <nav>
         <!-- <img src="./images/pie.png" height="55" alt="Pie Logo" /> -->
-        <img src="./images/cake.svg" height="55" alt="Pie logo" />
+        <ul>
+          <li><img src="./images/cake.svg" height="55" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pie-overview.html">All pies</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -79,6 +102,13 @@
         <header>
           <h4 style="text-align: center">Browse our pies</h4>
         </header>
+        <ul>
+          <li><a href="pie-overview.html">All pies</a></li>
+          <li><a href="cheesecakes.html">Cheesecakes</a></li>
+          <li><a href="fruit-pies.html">Fruit pies</a></li>
+          <li><a href="seasonal-pies.html">Seasonal pies</a></li>
+          <li><a href="#promos">Promotions</a></li>
+        </ul>
         <input
           type="search"
           class="search-box"
@@ -94,8 +124,8 @@
           </header>
           <figure>
             <img
-              src="./images/bethany.jpg"
-              width="700"
+              src="./images/bethany-fullsize.jpg"
+              width="600"
               alt="Bethany in her pie shop"
             />
             <figcaption>Bethany in her pie shop</figcaption>
@@ -121,10 +151,15 @@
             Bethany is famous for using only the best ingredients. This way, we
             can make sure that our pies are absolutely the best.
           </p>
+
+          <p>
+            Download our full
+            <a href="./downloads/Price list.zip">price list</a>
+          </p>
         </article>
-        <section>
+        <section id="promos">
           <h3 style="font-family: verdana">&nbsp;Our weekly promotions</h3>
-          <h4>Cheese cake</h4>
+          <h4>Cheesecake</h4>
           £12.95 - serves 4 <br />
           <img
             src="https://gillcleerenpluralsight.blob.core.windows.net/files/cheesecake.jpg"
@@ -141,6 +176,14 @@
         </address>
 
         <small>&copy; 2021 Bethany's Pie Shop - All rights reserved</small>
+        <p>
+          Contact us via <a href="mailto:info@bethanyspieshop.com">email</a>
+        </p>
+        <p>
+          <small
+            ><a href="https://www.snowball.be">Created by Snowball</a></small
+          >
+        </p>
       </footer>
     </div>
   </body>

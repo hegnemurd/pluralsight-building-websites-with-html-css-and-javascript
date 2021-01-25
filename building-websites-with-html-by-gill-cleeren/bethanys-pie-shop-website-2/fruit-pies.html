@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Welcome to Bethany' Pie Shop!</title>
     <meta name="author" content="Bethany's Pie Shop" />
     <meta name="description" content="Store front for Bethany's Pie Shop" />
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
-    <title>Welcome to Bethany's Pie Shop</title>
     <style>
       body {
         margin-top: 0px;
@@ -92,10 +93,10 @@
       }
     </style>
   </head>
+
   <body>
     <header id="main-header">
       <nav>
-        <!-- <img src="./images/pie.png" height="55" alt="Pie Logo" /> -->
         <ul>
           <li><img src="./images/cake.svg" height="55" /></li>
           <li><a href="index.html">Home</a></li>
@@ -106,7 +107,7 @@
 
     <div style="width: 1000px; margin-left: auto; margin-right: auto">
       <aside id="left-menu">
-        <img src="./images/bethanylogo.png" alt="Bethany's Pie Shop Logo" />
+        <a href="index.html"><img src="./images/bethanylogo.png" /></a>
         <header>
           <h4 style="text-align: center">Browse our pies</h4>
         </header>
@@ -130,165 +131,70 @@
           <thead>
             <tr>
               <th>Image</th>
-              <th>Pie Name</th>
+              <th>Pie name</th>
               <th>Description</th>
               <th>Price</th>
               <th>Details</th>
             </tr>
           </thead>
           <tbody>
-            <!-- <tr>
-              <td colspan="5">Here are the pies of Bethany</td>
-            </tr> -->
             <tr>
               <td>
-                <img
-                  src="./images/products/cheesecakesmall.jpg"
-                  width="100"
-                  alt="Cheesecake with strawberries"
-                />
+                <img src="./images/products/applepiesmall.jpg" width="100" />
               </td>
-              <td>Cheesecake</td>
-              <td>Plain cheesecake. Plain pleasure.</td>
-              <td>£12.95</td>
-              <td>View details</td>
-            </tr>
-            <tr>
-              <td>
-                <img
-                  src="./images/products/applepiesmall.jpg"
-                  width="100"
-                  alt="Apple Pie"
-                />
-              </td>
-              <td>Apple Pie</td>
-              <td>Our famous apple pie.</td>
+              <td>Apple pie</td>
+              <td>Our famous apple pie</td>
               <td>£14.95</td>
-              <td>View details</td>
+              <td><a href="apple-pie.html" target="_blank">View details</a></td>
             </tr>
-
             <tr>
               <td>
                 <img
                   src="./images/products/cranberrypiesmall.jpg"
                   width="100"
-                  alt="Cranberry Pie"
                 />
               </td>
-              <td>Cranberry Pie</td>
-              <td>A Christmas favourite.</td>
+              <td>Cranberry pie</td>
+              <td>A Christmas favorite</td>
               <td>£18.95</td>
               <td>View details</td>
             </tr>
-
             <tr>
               <td>
-                <img
-                  src="./images/products/cherrypiesmall.jpg"
-                  width="100"
-                  alt="Cherry Pie"
-                />
+                <img src="./images/products/cherrypiesmall.jpg" width="100" />
               </td>
-              <td>Cherry Pie</td>
+              <td>Cherry pie</td>
               <td>A summer classic!</td>
               <td>£18.95</td>
               <td>View details</td>
             </tr>
-
             <tr>
               <td>
-                <img
-                  src="./images/products/peachpiesmall.jpg"
-                  width="100"
-                  alt="Peach Pie"
-                />
+                <img src="./images/products/peachpiesmall.jpg" width="100" />
               </td>
-              <td>Peach Pie</td>
-              <td>Sweet as peach.</td>
+              <td>Peach pie</td>
+              <td>Sweet as peach</td>
               <td>£18.95</td>
               <td>View details</td>
             </tr>
-
             <tr>
               <td>
-                <img
-                  src="./images/products/pumpkinpiesmall.jpg"
-                  width="100"
-                  alt="Pumpkin Pie"
-                />
-              </td>
-              <td>Pumpkin Pie</td>
-              <td>Our Halloween favourite.</td>
-              <td>£18.95</td>
-              <td>View details</td>
-            </tr>
-
-            <tr>
-              <td>
-                <img
-                  src="./images/products/christmasapplepiesmall.jpg"
-                  width="100"
-                  alt="Christmas Apple Pie"
-                />
-              </td>
-              <td>Christmas Apple Pie</td>
-              <td>Happy holidays with this pie!</td>
-              <td>£19.95</td>
-              <td>View details</td>
-            </tr>
-
-            <tr>
-              <td>
-                <img
-                  src="./images/products/blueberrycheesecakesmall.jpg"
-                  width="100"
-                  alt="Bllueberry Cheesecake"
-                />
-              </td>
-              <td>Blueberry Cheesecake</td>
-              <td>You'll love it!</td>
-              <td>£17.95</td>
-              <td>View details</td>
-            </tr>
-
-            <tr>
-              <td>
-                <img
-                  src="./images/products/rhubarbpiesmall.jpg"
-                  width="100"
-                  alt="Rhubarb Pie"
-                />
+                <img src="./images/products/rhubarbpiesmall.jpg" width="100" />
               </td>
               <td>Rhubarb Pie</td>
-              <td>So sweet!</td>
+              <td>My God, so sweet!</td>
               <td>£21.95</td>
               <td>View details</td>
             </tr>
-
             <tr>
               <td>
                 <img
                   src="./images/products/strawberrypiesmall.jpg"
                   width="100"
-                  alt="Strawberry Pie"
                 />
               </td>
               <td>Strawberry Pie</td>
               <td>Our delicious strawberry pie!</td>
-              <td>£18.95</td>
-              <td>View details</td>
-            </tr>
-
-            <tr>
-              <td>
-                <img
-                  src="./images/products/strawberrycheesecakesmall.jpg"
-                  width="100"
-                  alt="Strawberry Cheesecake"
-                />
-              </td>
-              <td>Strawberry Cheesecake</td>
-              <td>One of the best cheesecakes you'll ever find!</td>
               <td>£18.95</td>
               <td>View details</td>
             </tr>
