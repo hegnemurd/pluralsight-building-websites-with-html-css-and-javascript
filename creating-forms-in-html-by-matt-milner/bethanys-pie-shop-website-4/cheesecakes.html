@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Bethany' Pie Shop!</title>
+    <meta name="author" content="Bethany's Pie Shop" />
+    <meta name="description" content="Store front for Bethany's Pie Shop" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header id="main-header">
+      <nav>
+        <ul>
+          <li><img src="./images/cake.svg" height="55" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pie-overview.html">All Pies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div style="width: 1000px; margin-left: auto; margin-right: auto">
+      <aside id="left-menu">
+        <a href="index.html"><img src="./images/bethanylogo.png" /></a>
+        <header>
+          <h4 style="text-align: center">Browse our pies</h4>
+        </header>
+        <ul>
+          <li><a href="pie-overview.html">All Pies</a></li>
+          <li><a href="cheese-cakes.html">Cheesecakes</a></li>
+          <li><a href="fruit-pies.html">Fruit Pies</a></li>
+          <li><a href="seasonal-pies.html">Seasonal Pies</a></li>
+        </ul>
+        <input
+          type="search"
+          class="search-box"
+          placeholder="Search our store"
+        />
+      </aside>
+      <main id="main">
+        <table>
+          <caption>
+            Our delicious selection of pies for you to enjoy!
+          </caption>
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Pie name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./images/products/cheesecakesmall.jpg" width="100" />
+              </td>
+              <td>Cheesecake</td>
+              <td>Plain cheesecake. Plain pleasure.</td>
+              <td>£12.95</td>
+              <td>View details</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="./images/products/blueberrycheesecakesmall.jpg"
+                  width="100"
+                />
+              </td>
+              <td>Blueberry Cheesecake</td>
+              <td>You'll love it!</td>
+              <td>£17.95</td>
+              <td>View details</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="./images/products/strawberrycheesecakesmall.jpg"
+                  width="100"
+                />
+              </td>
+              <td>Strawberry Cheesecake</td>
+              <td>One of the best cheesecakes you'll ever find!</td>
+              <td>£18.95</td>
+              <td>View details</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+      <footer>
+        <p>Our address is</p>
+        <address>
+          Bethany's Pie Shop - Bakery Street 555 Brussels Belgium
+        </address>
+
+        <small>&copy; 2021 Bethany's Pie Shop - All rights reserved</small>
+      </footer>
+    </div>
+  </body>
+</html>
