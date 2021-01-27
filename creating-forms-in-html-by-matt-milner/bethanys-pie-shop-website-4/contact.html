@@ -42,17 +42,47 @@
           method="POST"
           enctype="application/x-www-form-urlencoded"
         >
-          Your name: <input type="text" name="customerName" /> <br />
-          Your email: <input type="email" name="customerEmail" /> <br />
-          Your phone: <input type="tel" name="customerPhone" />
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="nameField">Your name:</label>
+            <input id="nameField" type="text" name="customerName" /> <br />
+            Your email: <input type="email" name="customerEmail" /> <br />
+            Your phone: <input type="tel" name="customerPhone" />
+            <label><input type="radio" name="phone" value="cell" />Cell</label>
+            <label><input type="radio" name="phone" value="work" />Work</label>
+            <label><input type="radio" name="phone" value="home" />Home</label>
+            <br />
+            Okay to contact me: <br />
+            <input type="checkbox" name="okayToContact" value="phone" />by phone
+            <input type="checkbox" name="okayToContact" value="email" /> by
+            email
+          </fieldset>
           <input type="hidden" name="source" value="contactForm" /><br />
-          Your feedback: <br /><textarea
-            name="feedbackText"
-            cols="40"
-            rows="3"
-          ></textarea>
-          Severity: <input type="number" name="severity" /> <br />
           <br />
+          <fieldset>
+            <legend>Feedback</legend>
+            <textarea name="feedbackText" cols="40" rows="3"></textarea>
+            <br />
+            Feedback type:
+            <select name="feedbackType" multiple="multiple" size="6">
+              <optgroup label="stores">
+                <option value="webstore">Web Store</option>
+                <option value="store">Physical Store</option>
+              </optgroup>
+              <option value="webtech">Website Issue</option>
+              <option value="general">General Feedback</option>
+            </select>
+
+            <br />
+            Severity: <input type="number" min="1" max="10" name="severity" />
+            <br />
+            Severity:
+            <input type="range" min="1" max="10" name="severityRange" />
+            <br />
+            Date: <input type="date" name="issueDate" /><br />
+            Time: <input type="time" name="issueTime" />
+            <br />
+          </fieldset>
           <input type="submit" value="sendContact" />
         </form>
       </main>
