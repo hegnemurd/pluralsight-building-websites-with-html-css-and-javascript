@@ -61,10 +61,20 @@
           <br />
           <fieldset>
             <legend>Feedback</legend>
-            <textarea name="feedbackText" cols="40" rows="3"></textarea>
+            <textarea
+              tabindex="1"
+              name="feedbackText"
+              cols="40"
+              rows="3"
+            ></textarea>
             <br />
             Feedback type:
-            <select name="feedbackType" multiple="multiple" size="6">
+            <select
+              tabindex="2"
+              name="feedbackType"
+              multiple="multiple"
+              size="6"
+            >
               <optgroup label="stores">
                 <option value="webstore">Web Store</option>
                 <option value="store">Physical Store</option>
@@ -74,13 +84,19 @@
             </select>
 
             <br />
-            Severity: <input type="number" min="1" max="10" name="severity" />
+            Severity: <input tabindex="3" type="number" min="1" max="10" name="severity" />
             <br />
             Severity:
-            <input type="range" min="1" max="10" name="severityRange" />
+            <input
+              tabindex="4"
+              type="range"
+              min="1"
+              max="10"
+              name="severityRange"
+            />
             <br />
-            Date: <input type="date" name="issueDate" /><br />
-            Time: <input type="time" name="issueTime" />
+            Date: <input tabindex="5" type="date" name="issueDate" /><br />
+            Time: <input tabindex="6" type="time" name="issueTime" />
             <br />
           </fieldset>
           <input type="submit" value="sendContact" />
