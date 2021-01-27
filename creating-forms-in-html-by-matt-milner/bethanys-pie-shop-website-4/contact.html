@@ -37,6 +37,24 @@
       </aside>
       <main id="main">
         <h1>Contact Us</h1>
+        <form
+          action="contact.hmtl"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+        >
+          Your name: <input type="text" name="customerName" /> <br />
+          Your email: <input type="email" name="customerEmail" /> <br />
+          Your phone: <input type="tel" name="customerPhone" />
+          <input type="hidden" name="source" value="contactForm" /><br />
+          Your feedback: <br /><textarea
+            name="feedbackText"
+            cols="40"
+            rows="3"
+          ></textarea>
+          Severity: <input type="number" name="severity" /> <br />
+          <br />
+          <input type="submit" value="sendContact" />
+        </form>
       </main>
 
       <footer>
