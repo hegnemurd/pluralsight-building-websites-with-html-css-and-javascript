@@ -125,3 +125,24 @@ nav > ul > li a {
   width: 180px;
   padding-right: 10px;
 }
+
+fieldset {
+  border-color: #a593c2;
+  border-width: 3px;
+  border-style: solid;
+  /* border: solid 3px #a593c2; */
+}
+
+fieldset > legend {
+  color: #a593c2;
+}
+
+p > label {
+  display: block;
+}
+
+input[type="email"],
+input[type="tel"],
+textarea {
+  border-radius: 7px;
+}

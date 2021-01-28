@@ -46,7 +46,7 @@
             <legend>Contact Information</legend>
             <p>
               <label for="nameField">Your name:</label>
-              <input id="nameField" type="text" name="customerName" />
+              <input id="nameField" type="text" required name="customerName" />
             </p>
             <p>
               <label for="customerEmail">Your email:</label>
@@ -87,27 +87,33 @@
 
           <fieldset>
             <legend>Feedback</legend>
-            <textarea
-              tabindex="1"
-              name="feedbackText"
-              cols="40"
-              rows="3"
-            ></textarea>
-            <br />
-            Feedback type:
-            <select
-              tabindex="2"
-              name="feedbackType"
-              multiple="multiple"
-              size="6"
-            >
-              <optgroup label="stores">
-                <option value="webstore">Web Store</option>
-                <option value="store">Physical Store</option>
-              </optgroup>
-              <option value="webtech">Website Issue</option>
-              <option value="general">General Feedback</option>
-            </select>
+            <p>
+              <textarea
+                required
+                tabindex="1"
+                name="feedbackText"
+                cols="40"
+                rows="3"
+              ></textarea>
+            </p>
+
+            <p>
+              <label for="feebackType">Feedback type: </label>
+              <select
+                tabindex="2"
+                name="feedbackType"
+                multiple="multiple"
+                size="6"
+                id="feedbackType"
+              >
+                <optgroup label="stores">
+                  <option value="webstore">Web Store</option>
+                  <option value="store">Physical Store</option>
+                </optgroup>
+                <option value="webtech">Website Issue</option>
+                <option value="general">General Feedback</option>
+              </select>
+            </p>
 
             <p>
               <label for="severity">Severity: </label>
@@ -117,6 +123,7 @@
                 min="1"
                 max="10"
                 name="severity"
+                id="severity"
               />
             </p>
 
@@ -128,15 +135,18 @@
                 min="1"
                 max="10"
                 name="severityRange"
+                id="severityRange"
               />
             </p>
 
             <p>
-              <label for="issueDate"></label>
+              <label for="issueDate">Issue date: </label>
+              <input tabindex="5" type="date" name="issueDate" id="issueDate" />
             </p>
-            Date: <input tabindex="5" type="date" name="issueDate" /><br />
-            Time: <input tabindex="6" type="time" name="issueTime" />
-            <br />
+            <p>
+              <label for="issueTime">Issue time: </label>
+              <input tabindex="6" type="time" name="issueTime" id="issueTime" />
+            </p>
           </fieldset>
           <input type="submit" value="sendContact" />
         </form>
