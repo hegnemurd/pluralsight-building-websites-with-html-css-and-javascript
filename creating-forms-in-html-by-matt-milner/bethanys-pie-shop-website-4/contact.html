@@ -44,21 +44,47 @@
         >
           <fieldset>
             <legend>Contact Information</legend>
-            <label for="nameField">Your name:</label>
-            <input id="nameField" type="text" name="customerName" /> <br />
-            Your email: <input type="email" name="customerEmail" /> <br />
-            Your phone: <input type="tel" name="customerPhone" />
-            <label><input type="radio" name="phone" value="cell" />Cell</label>
-            <label><input type="radio" name="phone" value="work" />Work</label>
-            <label><input type="radio" name="phone" value="home" />Home</label>
-            <br />
-            Okay to contact me: <br />
-            <input type="checkbox" name="okayToContact" value="phone" />by phone
-            <input type="checkbox" name="okayToContact" value="email" /> by
-            email
+            <p>
+              <label for="nameField">Your name:</label>
+              <input id="nameField" type="text" name="customerName" />
+            </p>
+            <p>
+              <label for="customerEmail">Your email:</label>
+              <input id="customerEmail" type="email" name="customerEmail" />
+            </p>
+            <p>
+              <label for="customerPhone">Your phone:</label>
+              <input id="yourPhone" type="tel" name="customerPhone" />
+            </p>
+
+            <p>
+              <label>Phone type: </label>
+            </p>
+
+            <label
+              ><input type="radio" name="phoneType" value="cell" />Cell</label
+            >
+            <label
+              ><input type="radio" name="phoneType" value="work" />Work</label
+            >
+            <label
+              ><input type="radio" name="phoneType" value="home" />Home</label
+            >
+
+            <p>
+              Okay to contact me:
+              <label>
+                <input type="checkbox" name="okayToContact" value="phone" />by
+                phone</label
+              >
+              <label>
+                <input type="checkbox" name="okayToContact" value="email" /> by
+                email</label
+              >
+            </p>
           </fieldset>
           <input type="hidden" name="source" value="contactForm" /><br />
-          <br />
+
           <fieldset>
             <legend>Feedback</legend>
             <textarea
@@ -83,25 +109,31 @@
               <option value="general">General Feedback</option>
             </select>
 
-            <br />
-            Severity:
-            <input
-              tabindex="3"
-              type="number"
-              min="1"
-              max="10"
-              name="severity"
-            />
-            <br />
-            Severity:
-            <input
-              tabindex="4"
-              type="range"
-              min="1"
-              max="10"
-              name="severityRange"
-            />
-            <br />
+            <p>
+              <label for="severity">Severity: </label>
+              <input
+                tabindex="3"
+                type="number"
+                min="1"
+                max="10"
+                name="severity"
+              />
+            </p>
+
+            <p>
+              <label for="severityRange">Severity: </label>
+              <input
+                tabindex="4"
+                type="range"
+                min="1"
+                max="10"
+                name="severityRange"
+              />
+            </p>
+
+            <p>
+              <label for="issueDate"></label>
+            </p>
             Date: <input tabindex="5" type="date" name="issueDate" /><br />
             Time: <input tabindex="6" type="time" name="issueTime" />
             <br />
