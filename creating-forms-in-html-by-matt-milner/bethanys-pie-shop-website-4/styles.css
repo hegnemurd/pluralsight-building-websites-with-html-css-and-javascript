@@ -146,3 +146,20 @@ input[type="tel"],
 textarea {
   border-radius: 7px;
 }
+
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:focus:invalid {
+  border-color: black;
+}
+
+input:required,
+textarea:required {
+  border-style: dashed;
+}

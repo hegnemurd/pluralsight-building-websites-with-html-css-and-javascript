@@ -46,7 +46,14 @@
             <legend>Contact Information</legend>
             <p>
               <label for="nameField">Your name:</label>
-              <input id="nameField" type="text" required name="customerName" />
+              <input
+                id="nameField"
+                type="text"
+                required
+                minlength="10"
+                maxlength="75"
+                name="customerName"
+              />
             </p>
             <p>
               <label for="customerEmail">Your email:</label>
@@ -54,7 +61,13 @@
             </p>
             <p>
               <label for="customerPhone">Your phone:</label>
-              <input id="yourPhone" type="tel" name="customerPhone" />
+              <input
+                id="yourPhone"
+                type="tel"
+                pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$"
+                name="customerPhone"
+              />
+              <!-- Pattern attribute works for: 07222 555555, (07222) 555555, +44 7222 55 55 -->
             </p>
 
             <p>
