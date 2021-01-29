@@ -112,3 +112,42 @@ h6 {
 h4 {
   text-align: center;
 }
+
+.promotion {
+  background-color: #23cea6;
+  color: white;
+  width: 450px;
+  text-align: center;
+  border: 10px solid #a693c2;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.promotion img {
+  width: 100%;
+}
+
+.promotion-purple {
+  background-color: #a593c2;
+  border-color: #23cea6;
+}
+
+#sidebar-heading {
+  font-size: 24px;
+}
+
+#left-menu a {
+  color: #199175;
+}
+
+#left-menu a:hover {
+  color: #116552;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #b4ddd3;
+}
+
+tr:nth-of-type(even) {
+  background-color: #e0d7ef;
+}

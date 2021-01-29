@@ -31,11 +31,16 @@
         <a href="./index.html"><img src="./images/bethanylogo.png" /></a>
 
         <header>
-          <h4>Browse our pies</h4>
+          <h4 id="sidebar-heading">Browse our pies</h4>
         </header>
         <ul>
           <li><a href="./pie-overview.html">All Pies</a></li>
           <li><a href="./cheesecakes.html">Cheesecakes</a></li>
+          <ul>
+            <li><a href="./cheesecakes.html#classic">Classic</a></li>
+            <li><a href="./cheesecakes.html#blueberry">Blueberry</a></li>
+            <li><a href="./cheesecakes.html#strawberry">Strawberry</a></li>
+          </ul>
           <li><a href="./fruit-pies.html">Fruit Pies</a></li>
           <li><a href="./seasonal-pies.html">Seasonal Pies</a></li>
           <li><a href="#promos">Promotions</a></li>
@@ -53,11 +58,13 @@
         </header>
 
         <p>Check out our current promotions below!</p>
-        <div>
-          <h2>Buy One Get One</h2>
+        <div class="promotion">
+          <img src="./images/products/applepie.jpg" alt="Apple Pie" />
+          <h2>Buy One Get One Free</h2>
           <p>Applies to fruit and seasonal pies. Cheesecakes excluded.</p>
         </div>
-        <div>
+        <div class="promotion promotion-purple">
+          <img src="./images/products/cheesecake.jpg" alt="Cheesecake" />
           <h2>Cheesecake Wednesdays</h2>
           <p>Celebrate Hump Day with 25% off all cheese cakes.</p>
         </div>
