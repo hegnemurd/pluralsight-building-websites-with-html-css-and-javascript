@@ -1,6 +1,6 @@
 body {
   margin-top: 0px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: auto;
   margin-right: auto;
   background-color: #e6e4d9;
@@ -15,6 +15,25 @@ nav {
   height: 60px;
   width: 1000px;
   margin: 0 auto 20px;
+}
+
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
+  display: block;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
 }
 
 nav > ul {
@@ -58,4 +77,38 @@ footer {
   padding: 5px;
   margin: 10px 10px;
   width: 200px;
+}
+
+p {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 22px;
+  /* font-weight: normal; */
+}
+
+li {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-family: "Cookie", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+}
+
+h4 {
+  text-align: center;
 }
