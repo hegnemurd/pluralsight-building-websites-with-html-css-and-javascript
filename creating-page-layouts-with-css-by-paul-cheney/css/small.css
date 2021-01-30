@@ -115,6 +115,12 @@ nav ul {
   display: none;
 }
 
+/* ****** main image rules ****** */
+main img {
+  width: 100%;
+  height: auto;
+}
+
 /* ****** footer rules ****** */
 footer {
   background-color: #9b87b8;
