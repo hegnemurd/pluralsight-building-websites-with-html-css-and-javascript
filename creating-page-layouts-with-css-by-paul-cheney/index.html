@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home | Bethany's Pie Shop</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
@@ -16,16 +15,72 @@
     <link rel="stylesheet" href="./css/small.css" />
     <link rel="stylesheet" href="./css/medium.css" />
     <link rel="stylesheet" href="./css/large.css" />
+    <title>Home | Bethany's Pie Shop</title>
   </head>
   <body>
-    <header></header>
+    <header class="clearfix">
+      <div class="row limited">
+        <section class="column small-12">
+          <img src="./images/logo.svg" alt="Bethany Logo" />
+          <h1>Bethany's</h1>
+          <h2>Fantastic Pie Shop</h2>
+        </section>
+      </div>
+      <!-- end of row -->
+    </header>
 
-    <nav></nav>
+    <nav class="clearfix">
+      <div class="row limited">
+        <button id="hamburgerBtn">&#9776;</button>
+        <ul id="primaryNav">
+          <li class="active"><a href="#">Specials</a></li>
+          <li><a href="#">Cheesecakes</a></li>
+          <li><a href="#">Fruit Pies</a></li>
+          <li><a href="#">Cake Shop</a></li>
+        </ul>
+      </div>
+      <!-- end of row -->
+    </nav>
 
     <main>
-      <h1>Sample Text</h1>
+      <h1>Specials</h1>
     </main>
 
-    <footer></footer>
+    <footer class="clearfix">
+      <div class="row limited">
+        <section class="column small-12 medium-6 large-3">
+          <h2>Location</h2>
+          <ul>
+            <li>Bethany's Pie Shop</li>
+            <li>123 Bakery Street</li>
+            <li>Brussels, Belgium</li>
+          </ul>
+        </section>
+        <section class="column small-12 medium-6 large-3">
+          <h2>Company</h2>
+          <ul>
+            <li>Catering</li>
+            <li>Delivery</li>
+            <li>Swag Shop</li>
+            <li>Support</li>
+          </ul>
+        </section>
+        <section class="column small-12 medium-6 large-3">
+          <h2>Social</h2>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+          </ul>
+        </section>
+        <section class="column small-12 medium-6 large-3">
+          <h2>About Us</h2>
+          <img src="./images/logo2.png" alt="logo" />
+          <p>&copy; 2021 &bull; all rights reserved.</p>
+        </section>
+      </div>
+      <!-- end row -->
+    </footer>
+    <script type="text/javascript" src="./js/menuToggle.js"></script>
   </body>
 </html>
