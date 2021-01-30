@@ -128,6 +128,11 @@ main h3 {
   margin: 0.5rem 0 0.1rem 0;
 }
 
+main p {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+}
+
 main h1 {
   font-size: 2rem;
 }
