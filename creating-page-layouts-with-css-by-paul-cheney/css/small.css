@@ -115,10 +115,40 @@ nav ul {
   display: none;
 }
 
-/* ****** main image rules ****** */
+/* ****** main rules ****** */
 main img {
   width: 100%;
   height: auto;
+}
+
+main h1 {
+  color: #9b87b8;
+  font-style: italic;
+  margin: 0.5rem 0 0.1rem 0;
+  font-size: 2rem;
+}
+
+.labeled {
+  position: relative;
+}
+
+.labeled h6,
+.labeled p {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem 1rem;
+}
+.labeled h6 {
+  top: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.labeled p {
+  bottom: 0;
+  font-weight: 700;
+  color: #b00;
 }
 
 /* ****** footer rules ****** */
