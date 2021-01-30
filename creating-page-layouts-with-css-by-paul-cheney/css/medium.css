@@ -15,6 +15,10 @@
     width: 50%;
   }
 
+  .medium-4 {
+    width: 33.3333333%;
+  }
+
   /* ****** nav rules ****** */
   nav button {
     display: none;
