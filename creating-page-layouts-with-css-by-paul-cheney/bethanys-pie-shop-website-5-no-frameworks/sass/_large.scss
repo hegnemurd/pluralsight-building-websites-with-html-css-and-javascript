@@ -1,6 +1,6 @@
 /* ****** sizing rules ****** */
 .large-3 {
-  width: 25%;
+  flex-basis: 25%;
 }
 
 /* ****** nav rules ****** */
@@ -9,7 +9,7 @@ nav ul {
 }
 
 nav li {
-  width: auto;
+  flex-basis: auto;
 }
 
 nav a {
