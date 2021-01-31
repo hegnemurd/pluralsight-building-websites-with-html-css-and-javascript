@@ -41,7 +41,7 @@ body {
 
 /* ****** header rules ****** */
 header {
-  background-color: #9b87b8;
+  background-color: $primaryColor;
 }
 
 header img {
@@ -79,7 +79,7 @@ button#hamburgerBtn {
 }
 
 nav {
-  background-color: #23cfa7;
+  background-color: $secondaryColor;
 }
 
 nav ul {
@@ -123,23 +123,25 @@ main img {
 
 main h1,
 main h3 {
-  color: #9b87b8;
+  color: $primaryColor;
   font-style: italic;
   margin: 0.5rem 0 0.1rem 0;
 }
 
-main p {
-  font-size: 1.2rem;
-  margin: 0 0 0.3rem 0;
-}
+main {
+  h1 {
+    font-size: 2rem;
+  }
 
-main h1 {
-  font-size: 2rem;
-}
+  h3 {
+    font-size: 1.2rem;
+  }
 
-main h3 {
-  font-size: 1.2rem;
-}
+  p {
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem 0;
+  }
+} // end of main
 
 .labeled {
   position: relative;
@@ -166,7 +168,7 @@ main h3 {
 
 /* ****** footer rules ****** */
 footer {
-  background-color: #9b87b8;
+  background-color: $primaryColor;
   font-size: 1.2rem;
 }
 
