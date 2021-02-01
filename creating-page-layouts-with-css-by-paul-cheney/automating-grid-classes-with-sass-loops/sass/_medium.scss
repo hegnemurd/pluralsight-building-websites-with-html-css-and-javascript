@@ -1,1 +1,7 @@
 /* 12 COLUMN GRID SYSTEM */
+@for $i from 1 through 12 {
+  $w: ($i / 12) * 100%;
+  .medium-#{$i} {
+    flex-basis: $w;
+  }
+} // end loop - w is for width
