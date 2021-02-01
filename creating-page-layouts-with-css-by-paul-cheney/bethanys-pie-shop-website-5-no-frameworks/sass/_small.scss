@@ -21,18 +21,20 @@ body {
   flex-wrap: wrap;
 }
 
-.limited {
-  max-width: 1140px;
-  margin: auto;
-}
-
 .column {
+  // float: left;
   padding: 0 2vw;
   margin: 0 0 0.75rem 0;
 }
 
 .small-12 {
+  // width: 100%;
   flex-basis: 100%;
+}
+
+.limited {
+  max-width: 1140px;
+  margin: auto;
 }
 
 .small-6 {
@@ -178,7 +180,17 @@ footer h2 {
   margin: 1rem 0 0.3rem 0;
 }
 
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer li {
+  padding-bottom: 0.3rem;
+}
+
 /* ****** making the element visible ****** */
+/* This class should not exist after changing everything to flexbox */
 .clearfix:after {
   content: "";
   display: table;
