@@ -1,0 +1,28 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+p {
+  text-align: center;
+}
+
+/* 12 COLUMN GRID SYSTEM */
+.column {
+  border: dashed red 1px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* 12 COLUMN GRID SYSTEM */
+}
+/* end of media query */
+@media only screen and (min-width: 1140px) {
+  /* 12 COLUMN GRID SYSTEM */
+}
+/* end of media query */

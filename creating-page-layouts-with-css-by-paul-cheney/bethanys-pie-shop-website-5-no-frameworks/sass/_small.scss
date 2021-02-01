@@ -21,6 +21,11 @@ body {
   flex-wrap: wrap;
 }
 
+.limited {
+  max-width: 1140px;
+  margin: auto;
+}
+
 .column {
   // float: left;
   padding: 0 2vw;
@@ -30,11 +35,6 @@ body {
 .small-12 {
   // width: 100%;
   flex-basis: 100%;
-}
-
-.limited {
-  max-width: 1140px;
-  margin: auto;
 }
 
 .small-6 {
