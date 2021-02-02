@@ -110,6 +110,37 @@
       /* #whiteboard {
          background-color: white; 
       } */
+
+      .cupcakeimage {
+        /* background-color: white; */
+        width: 268px;
+        height: 309px;
+        background-image: url(./images/cupcakes.png);
+        margin-top: 5px;
+        filter: drop-shadow(30px 10px 4px black);
+      }
+
+      #cupcake1 {
+        filter: saturate(75%);
+      }
+
+      #cupcake2 {
+        background-position-y: 368px;
+        height: 348px;
+        filter: blur(100px);
+      }
+
+      #cupcake3 {
+        background-position-x: -263px;
+        height: 442px;
+        filter: invert(100%);
+      }
+
+      #cupcake4 {
+        background-position-x: -263px;
+        background-position-y: 301px;
+        filter: hue-rotate(180deg);
+      }
     </style>
   </head>
   <body>
@@ -131,6 +162,10 @@
       </p>
       <div id="whiteboard">
         <img id="cupcakes" src="./images/cupcakes.png" alt="Cupcakes" />
+        <div class="cupcakeimage" id="cupcake1"></div>
+        <div class="cupcakeimage" id="cupcake2"></div>
+        <div class="cupcakeimage" id="cupcake3"></div>
+        <div class="cupcakeimage" id="cupcake4"></div>
       </div>
     </div>
   </body>
