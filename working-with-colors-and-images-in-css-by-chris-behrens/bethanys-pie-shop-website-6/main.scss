@@ -1,3 +1,5 @@
+@use "sass:color";
+
 * {
   color: white;
 }
@@ -7,11 +9,14 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: auto;
   margin-right: auto;
-  background-color: #eb6240;
-  background-image: url("pieshop_files/cake.svg");
+  background-color: #eb6240; // #e6e4d9;
+  background-image: url("./images/cake.svg");
   background-repeat: repeat-y;
   background-position: 25% 0%;
+  // background-image: linear-gradient(to right, #eb6240, #23cfa7);
 }
+
+$cakeColor: #23cfa7;
 
 #mainheader {
   background-color: #a593c2;
@@ -55,8 +60,6 @@ nav > ul > li a {
   margin-bottom: 20px;
 }
 
-$cakeColor: #23cfa7;
-
 h1 {
   color: $cakeColor;
 }
@@ -77,7 +80,7 @@ p {
 }
 
 .description {
-  color: #50f0f0;
+  color: rgb(80, 240, 240);
 }
 
 #third,
@@ -96,13 +99,22 @@ p {
   width: 900px;
 }
 
+// #whiteboard{
+// 	background-color:white;
+// }
+
 .cupcakeimage {
+  // background-color: white;
   width: 268px;
   height: 309px;
-  background-image: url(./pieshop_files/cupcakes.png);
+  background-image: url(./images/cupcakes.png);
   margin: 5px;
   filter: drop-shadow(30px 10px 4px black);
 }
+
+// #cupcake1{
+
+// }
 
 #cupcake2 {
   background-position-y: 368px;
@@ -124,29 +136,31 @@ p {
 
 table {
   background-color: #eeeeee;
-}
-table thead {
-  font-weight: bold;
-  font-size: large;
-}
-table td {
-  color: black;
-  text-align: center;
-  padding: 10px;
-  border-right: 2px solid #888888;
-  border-bottom: 2px solid #888888;
+
+  thead {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  td {
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-right: 2px solid #888888;
+    border-bottom: 2px solid #888888;
+  }
 }
 
+$urgencyColor: #ff0000;
+
 .urgency1 {
-  background-color: #2a562a;
+  background-color: color.adjust($urgencyColor, $saturation: -66%);
 }
 
 .urgency2 {
-  background-color: #156b15;
+  background-color: color.adjust($urgencyColor, $saturation: -33%);
 }
 
 .urgency3 {
-  background-color: green;
+  background-color: color.adjust($urgencyColor, $saturation: -0%);
 }
-
-/*# sourceMappingURL=main.css.map */

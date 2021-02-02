@@ -23,20 +23,20 @@ p {
   box-shadow: 25px 25px 25px rgb(80, 240, 240);
 }
 
-/* #whiteboard {
-  background-color:white;
+/* #whiteboard{
+	background-color:white;
 } */
 
 .cupcakeimage {
   /*background-color: white;*/
   width: 268px;
   height: 309px;
-  background-image: url(./pieshop_files/cupcakes.png);
+  background-image: url(./images/cupcakes.png);
   margin-top: 5px;
   break-after: page;
 }
 
-/* #cupcake1 {
+/* #cupcake1{
 } */
 
 #cupcake2 {
