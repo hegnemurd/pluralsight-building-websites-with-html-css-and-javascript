@@ -1,0 +1,55 @@
+p {
+  color: #0000ff;
+}
+
+.description {
+  color: rgb(80, 240, 240);
+}
+
+#third,
+#fourth {
+  color: #00ff00;
+}
+
+#fourth {
+  color: rgba(255, 0, 0, 0.5);
+  padding: 10px;
+  background-color: blue;
+}
+
+#cupcakes {
+  background-color: white;
+  width: 300px;
+  box-shadow: 25px 25px 25px rgb(80, 240, 240);
+}
+
+/* #whiteboard {
+  background-color:white;
+} */
+
+.cupcakeimage {
+  /*background-color: white;*/
+  width: 268px;
+  height: 309px;
+  background-image: url(./pieshop_files/cupcakes.png);
+  margin-top: 5px;
+  break-after: page;
+}
+
+/* #cupcake1 {
+} */
+
+#cupcake2 {
+  background-position-y: 368px;
+  height: 348px;
+}
+
+#cupcake3 {
+  background-position-x: -263px;
+  height: 442px;
+}
+
+#cupcake4 {
+  background-position-x: -263px;
+  background-position-y: 301px;
+}

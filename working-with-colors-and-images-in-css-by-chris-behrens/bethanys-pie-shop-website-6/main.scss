@@ -1,0 +1,152 @@
+* {
+  color: white;
+}
+
+body {
+  margin-top: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eb6240;
+  background-image: url("pieshop_files/cake.svg");
+  background-repeat: repeat-y;
+  background-position: 25% 0%;
+}
+
+#mainheader {
+  background-color: #a593c2;
+}
+
+nav {
+  height: 60px;
+  width: 1000px;
+  margin: 0 auto 20px;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#leftmenu {
+  float: left;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+#main {
+  float: right;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+$cakeColor: #23cfa7;
+
+h1 {
+  color: $cakeColor;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+}
+
+.searchbox {
+  padding: 5px;
+  margin: 10px 10px;
+  width: 200px;
+}
+
+p {
+  color: #0000ff;
+}
+
+.description {
+  color: #50f0f0;
+}
+
+#third,
+#fourth {
+  color: #00ff00;
+}
+
+#fourth {
+  color: rgba(255, 0, 0, 0.5);
+  padding: 10px;
+  background-color: blue;
+}
+
+#cupcakes {
+  background-color: white;
+  width: 900px;
+}
+
+.cupcakeimage {
+  width: 268px;
+  height: 309px;
+  background-image: url(./pieshop_files/cupcakes.png);
+  margin: 5px;
+  filter: drop-shadow(30px 10px 4px black);
+}
+
+#cupcake2 {
+  background-position-y: 368px;
+  height: 343px;
+  filter: blur(100px);
+}
+
+#cupcake3 {
+  background-position-x: -263px;
+  height: 442px;
+  filter: invert(100%);
+}
+
+#cupcake4 {
+  background-position-x: -263px;
+  background-position-y: 301px;
+  filter: hue-rotate(180deg);
+}
+
+table {
+  background-color: #eeeeee;
+}
+table thead {
+  font-weight: bold;
+  font-size: large;
+}
+table td {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border-right: 2px solid #888888;
+  border-bottom: 2px solid #888888;
+}
+
+.urgency1 {
+  background-color: #2a562a;
+}
+
+.urgency2 {
+  background-color: #156b15;
+}
+
+.urgency3 {
+  background-color: green;
+}
+
+/*# sourceMappingURL=main.css.map */
