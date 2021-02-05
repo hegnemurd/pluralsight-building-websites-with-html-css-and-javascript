@@ -5,11 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Pie maker</title>
+    <style>
+      #options {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+      }
+    </style>
   </head>
   <body>
-    <canvas id="canvas" height="200" width="200"> </canvas>
+    <canvas id="canvas" height="400" width="400"></canvas>
+    <!-- <canvas id="canvas" height="200" width="200"></canvas> -->
+    <div id="options">
+      <fieldset>
+        <legend>Please choose a crust</legend>
+        <input type="radio" name="crust" value="none" checked />None<br />
+        <input type="radio" name="crust" value="pastry" />Pastry<br />
+        <input type="radio" name="crust" value="graham" />Graham Cracker<br />
+        <input type="radio" name="crust" value="chocolate" />Chocolate<br />
+      </fieldset>
+      <fieldset>
+        <legend>Please choose a filling</legend>
+        <input type="radio" name="filling" value="none" checked />None <br />
+        <input type="radio" name="filling" value="keylime" />Key Lime <br />
+        <input type="radio" name="filling" value="pumpkin" />Pumpkin <br />
+        <input type="radio" name="filling" value="lemon" />Lemon <br />
+      </fieldset>
+    </div>
     <script>
-      const canvas = document.getElementById("canvas");
+      document.getElementById("options").addEventListener("change", (e) => {
+        const options = {};
+        document.querySelectorAll("[name=crust]").forEach((elem) => {
+          if (elem.checked) {
+            options.crust = elem.value;
+          }
+        });
+        render(options);
+      });
+
+      function render(options) {
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        let outerCrustColor = "";
+        let innerCrustColor = "";
+        switch (options.crust) {
+          case "pastry":
+            outerCrustColor = "#DECCB8";
+            innerCrustColor = "#F2DFC9";
+            break;
+          case "graham":
+            outerCrustColor = "#BA879D";
+            innerCrustColor = "#DEA010";
+            break;
+          case "chocolate":
+            outerCrustColor = "#2E1802";
+            innerCrustColor = "#422303";
+            break;
+        }
+        if (outerCrustColor && innerCrustColor) {
+          ctx.fillStyle = outerCrustColor;
+          ctx.beginPath();
+          ctx.ellipse(200, 200, 150, 150, 0, 0, 2 * Math.PI);
+          ctx.fill();
+          ctx.fillStyle = innerCrustColor;
+          ctx.beginPath();
+          ctx.ellipse(200, 200, 110, 110, 0, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+        switch (options.filling) {
+          case "keylime":
+            ctx.fillStyle = "#DFF5A2";
+            break;
+          case "pumpkin":
+            ctx.fillStyle = "#BD7502";
+            break;
+          case "lemon":
+            ctx.fillStyle = "#FFF48D";
+            break;
+          default:
+            ctx.fillStyle = "transparent";
+        }
+        ctx.beginPath();
+        ctx.ellipse(200, 200, 140, 140, 0, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+
+      //   const canvas = document.getElementById("canvas");
+      //   const ctx = canvas.getContext("2d");
+      //   ctx.strokeStyle = "black";
+      //   ctx.fillStyle = "rgb(240, 90, 40";
+      //   ctx.lineWidth = 5;
+      //   ctx.beginPath();
+      //   ctx.rect(10, 10, 100, 100);
+      //   ctx.stroke();
+      //   ctx.fill();
     </script>
   </body>
 </html>
