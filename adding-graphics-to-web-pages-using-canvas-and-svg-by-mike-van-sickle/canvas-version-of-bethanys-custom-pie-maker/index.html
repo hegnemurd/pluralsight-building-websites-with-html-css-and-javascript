@@ -31,6 +31,11 @@
         <input type="radio" name="filling" value="pumpkin" />Pumpkin <br />
         <input type="radio" name="filling" value="lemon" />Lemon <br />
       </fieldset>
+      <fieldset>
+        <legend>Please choose a topping</legend>
+        <input type="radio" name="topping" value="none" checked />None <br />
+        <input type="radio" name="topping" value="meringue" />Meringue <br />
+      </fieldset>
     </div>
     <script>
       document.getElementById("options").addEventListener("change", (e) => {
@@ -38,6 +43,16 @@
         document.querySelectorAll("[name=crust]").forEach((elem) => {
           if (elem.checked) {
             options.crust = elem.value;
+          }
+        });
+        document.querySelectorAll("[name=filling]").forEach((elem) => {
+          if (elem.checked) {
+            options.filling = elem.value;
+          }
+        });
+        document.querySelectorAll("[name=topping]").forEach((elem) => {
+          if (elem.checked) {
+            options.topping = elem.value;
           }
         });
         render(options);
@@ -90,6 +105,65 @@
         ctx.beginPath();
         ctx.ellipse(200, 200, 140, 140, 0, 0, 2 * Math.PI);
         ctx.fill();
+
+        switch (options.topping) {
+          case "meringue":
+            ctx.fillStyle = "white";
+            ctx.strokeStyle = "#B3702D";
+            ctx.beginPath();
+            ctx.ellipse(200, 200, 130, 130, 0, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            for (let i = 0; i < 6; i++) {
+              ctx.save();
+              ctx.translate(200, 200);
+              ctx.rotate((i / 6) * 2 * Math.PI);
+              ctx.beginPath();
+              ctx.moveTo(0, 0);
+              ctx.quadraticCurveTo(65, -65, 0, -130);
+              ctx.stroke();
+              ctx.restore();
+            }
+            break;
+        }
+
+        const spans = [
+          {
+            font: "bold 25px sans-serif",
+            text: "Bethny's",
+            fillStyle: "#4DCFA8",
+          },
+          {
+            font: "25px sans-serif",
+            text: " Custom Pie Maker",
+            fillStyle: "#A593C2",
+          },
+        ];
+        let totalWidth = 0;
+        spans.forEach((span) => {
+          ctx.font = span.font;
+          span.dims = ctx.measureText(span.text);
+          totalWidth += span.dims.width;
+        });
+        let currentX = 200 - totalWidth / 2;
+        spans.forEach((span) => {
+          ctx.fillStyle = span.fillStyle;
+          ctx.font = span.font;
+          ctx.fillText(span.text, currentX, 30);
+          currentX += span.dims.width;
+        });
+
+        const image = new Image();
+        image.addEventListener("load", () => {
+          ctx.drawImage(image, 320, 320, 50, 50);
+        });
+        image.src = "https://pieshop.netlify.com/images/bethanylogo.png";
+
+        // const text = "Bethany's Custom Pie Maker";
+        // ctx.font = "25px sans-serif";
+        // const dims = ctx.measureText(text);
+        // ctx.fillStyle = "#A593C2";
+        // ctx.fillText(text, 200 - dims.width / 2, 30);
       }
 
       //   const canvas = document.getElementById("canvas");
