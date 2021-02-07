@@ -1,0 +1,16 @@
+* {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+}
+
+html,
+body {
+  background: #07038c;
+  margin: 0;
+}
+
+.grid-item {
+  background: #044bd9;
+  color: white;
+  border: 1px solid #377eff;
+}
