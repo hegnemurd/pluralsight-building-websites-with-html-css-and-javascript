@@ -7,17 +7,58 @@
     <title>Up and Running - CSS Grid</title>
     <link rel="stylesheet" href="css/display.css" />
     <link rel="stylesheet" href="css/css-grid.css" />
+    <link rel="stylesheet" href="css/pie-shop.css" />
   </head>
   <body>
-    <header>Header</header>
-    <nav>Side Nav</nav>
+    <header>
+      <nav aria-label="main">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">All pies</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav aria-label="sub">
+      <a href="#"><img src="images/bethanylogo.png" /></a>
+      <h2>Browse our pies</h2>
+      <ul>
+        <li><a href="#">All pies</a></li>
+        <li><a href="#">Cheese cakes</a></li>
+        <li><a href="#">Fruit pies</a></li>
+        <li><a href="#">Seasonal pies</a></li>
+      </ul>
+      <label for="search">Search</label>
+      <input id="search" type="text" placeholder="What are you looking for?" />
+    </nav>
     <main>
-      <section>Intro</section>
-      <article>Cake</article>
-      <article>Cake</article>
-      <article>Cake</article>
+      <section>
+        <h1>Cheesecakes</h1>
+        <p>Our delicious selection of cheesecakes for you to enjoy!</p>
+      </section>
+      <article>
+        <img src="images/cheesecakesmall.jpg" alt="" />
+        <h3>Cheesecake</h3>
+        <span>£12.95</span>
+        <p>Plain cheesecake. Plain pleasure.</p>
+      </article>
+      <article>
+        <img src="images/blueberrycheesecakesmall.jpg" alt="" />
+        <h3>Blueberry Cheesecake</h3>
+        <span>£17.95</span>
+        <p>You'll love it!</p>
+      </article>
+      <article>
+        <img src="images/strawberrycheesecakesmall.jpg" alt="" />
+        <h3>Strawberry Cheesecake</h3>
+        <span>£18.95</span>
+        <p>One of the best cheesecakes you'll ever find!</p>
+      </article>
     </main>
     <aside>Aside</aside>
-    <footer>Footer</footer>
+    <footer>
+      <p>Bethany's Pie Shop - Bakery Street 555, Brussels, Belgium</p>
+      <p>&copy; 2021 Bethany's Pie Shop - All rights reserved</p>
+    </footer>
   </body>
 </html>
