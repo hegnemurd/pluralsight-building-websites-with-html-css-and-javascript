@@ -1,0 +1,19 @@
+body {
+  display: grid;
+  grid-template-columns:
+    [left-edge] repeat(auto-fill, [block-start] 10em 3em [block-end])
+    [right-edge];
+}
+
+/* article {
+  grid-column: block-start / block-end;
+} */
+
+/* #article1 {
+  grid-column: block-start 3 / block-end 3;
+} */
+
+/* #article2 {
+  grid-column: block-start 2 / block-end 3;
+  grid-column: block-start 2 / span 2 block-end;
+} */
