@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  grid: auto-flow min-content / repeat(12, 1fr);
+  grid-gap: 1em;
+  margin: 1em;
+}
+
+header,
+footer {
+  grid-column: 1 / -1;
+}
+
+aside,
+nav {
+  grid-column: 1 / 5;
+}
+
+main {
+  /* grid-column: 5 / 13;
+  grid-row: 2 / 4; */
+  /* grid-area takes g-r-start / g-col-start / g-r-end / g-col-end */
+  grid-area: 2 / 5 / 4 / 13;
+}
+
+body > img {
+  grid-column: span 3;
+}
