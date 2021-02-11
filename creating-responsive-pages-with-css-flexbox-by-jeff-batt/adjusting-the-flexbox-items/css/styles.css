@@ -1,0 +1,160 @@
+/*Main Area*/
+body {
+  margin-top: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e6e4d9;
+  background-image: url("../images/pattern.png");
+}
+
+#mainheader {
+  background-color: #a593c2;
+}
+
+/*Top Menu*/
+
+nav {
+  height: 60px;
+  width: 1000px;
+  margin: 0 auto 20px;
+}
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Side Menu*/
+
+.mainContent ul {
+  padding-inline-start: 0;
+  margin-right: 0;
+  padding: 0.7rem;
+}
+
+.mainContent ul > a > li {
+  background-color: #cf4522;
+  color: #fff;
+  list-style: none;
+  padding: 14px 25px;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.mainContent ul > a > li:hover {
+  background-color: #b43110;
+}
+
+.mainContent ul > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mainContent {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: blue;
+  height: 600px;
+  align-content: space-between; */
+}
+
+.pieGallery {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.pieCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem;
+  /* align-items: center; */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+}
+
+.pieCard > h5,
+.pieCard > p {
+  margin: 0.2rem 0;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardRow > h5,
+.cardRow > p {
+  margin: 0.2rem 0;
+}
+/*Main Content*/
+
+.pageTitle {
+  font-size: 35px;
+  color: #a593c2;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  margin: 5px 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.pieRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.leftMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: centerkds;
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > p,
+footer > address {
+  margin: 0.5rem 0;
+}
