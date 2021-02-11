@@ -144,7 +144,7 @@ nav > ul > li a {
 .leftMenu {
   display: flex;
   flex-direction: column;
-  align-items: centerkds;
+  align-items: center;
 }
 
 /*Footer*/
