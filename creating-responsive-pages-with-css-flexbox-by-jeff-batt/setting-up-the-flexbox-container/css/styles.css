@@ -73,11 +73,45 @@ nav > ul > li a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* background: blue;
+  /* background-color: blue;
   height: 600px;
   align-content: space-between; */
 }
 
+.pieGallery {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.pieCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem;
+  /* align-items: center; */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+}
+
+.pieCard > h5,
+.pieCard > p {
+  margin: 0.2rem 0;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardRow > h5,
+.cardRow > p {
+  margin: 0.2rem 0;
+}
 /*Main Content*/
 
 .pageTitle {
