@@ -43,8 +43,9 @@ nav > ul > li a {
 /*Side Menu*/
 
 .mainContent ul {
-  padding-inline-start: 2px;
-  margin-right: 1.5rem;
+  padding-inline-start: 0;
+  margin-right: 0;
+  padding: 0.7rem;
 }
 
 .mainContent ul > a > li {
@@ -71,7 +72,10 @@ nav > ul > li a {
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  /* background: blue;
+  height: 600px;
+  align-content: space-between; */
 }
 
 /*Main Content*/
@@ -106,12 +110,14 @@ nav > ul > li a {
 .leftMenu {
   display: flex;
   flex-direction: column;
+  align-items: centerkds;
 }
 
 /*Footer*/
 footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 footer > p,
