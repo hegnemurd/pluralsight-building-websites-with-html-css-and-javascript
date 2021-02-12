@@ -94,6 +94,7 @@ nav > ul > li a {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 0.4rem;
+  flex-grow: 2;
 }
 
 .pieCard > h5,
@@ -126,6 +127,15 @@ nav > ul > li a {
   margin: 5px 10px;
 }
 
+.box:nth-child(1) {
+  order: 15;
+}
+
+.pieRow h5,
+.pieRow p {
+  margin: 0;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -136,9 +146,17 @@ nav > ul > li a {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding-right: 0.5rem;
+}
+
+.pieRow > div {
+  flex-grow: 2;
+  padding-left: 0.5rem;
 }
 
 .leftMenu {
