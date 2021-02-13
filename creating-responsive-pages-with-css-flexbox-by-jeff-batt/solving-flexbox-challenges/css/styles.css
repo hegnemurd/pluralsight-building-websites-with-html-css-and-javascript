@@ -16,7 +16,7 @@ body {
 
 nav {
   height: 60px;
-  width: 1000px;
+  width: 80%;
   margin: 0 auto 20px;
 }
 
@@ -25,14 +25,20 @@ nav > ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav > ul > li {
-  float: left;
+nav > ul > li:nth-child(1) {
+  flex-grow: 2;
 }
+
+/* nav > ul > li {
+  float: left;
+} */
 
 nav > ul > li a {
-  display: block;
   color: white;
   text-align: center;
   padding: 16px;
@@ -42,12 +48,12 @@ nav > ul > li a {
 
 /*Side Menu*/
 
-.leftmenu ul {
+.leftMenu ul {
   padding-inline-start: 0;
   margin-right: 0;
 }
 
-.leftmenu ul > a > li {
+.leftMenu ul > a > li {
   background-color: #cf4522;
   color: #fff;
   list-style: none;
@@ -57,11 +63,11 @@ nav > ul > li a {
   margin-bottom: 2px;
 }
 
-.leftmenu ul > a > li:hover {
+.leftMenu ul > a > li:hover {
   background-color: #b43110;
 }
 
-.leftmenu ul > a {
+.leftMenu ul > a {
   text-decoration: none;
   color: #fff;
 }
