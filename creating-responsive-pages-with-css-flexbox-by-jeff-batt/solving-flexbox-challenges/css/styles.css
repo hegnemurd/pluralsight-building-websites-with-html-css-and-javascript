@@ -162,6 +162,10 @@ nav > ul > li a {
   flex-shrink: 3;
 }
 
+small {
+  padding: 0.3rem;
+}
+
 .pieGallery {
   display: flex;
   flex-direction: row;
@@ -172,9 +176,10 @@ nav > ul > li a {
 
 .pieCard {
   display: flex;
-  flex-direction: column wrap;
+  /* flex-direction: column wrap; */
   margin: 0.4rem;
-  /* align-items: center; */
+  align-items: center;
+  align-content: space-between;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   padding: 0.5rem;
@@ -203,6 +208,7 @@ nav > ul > li a {
 }
 
 .cardRow {
+  padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

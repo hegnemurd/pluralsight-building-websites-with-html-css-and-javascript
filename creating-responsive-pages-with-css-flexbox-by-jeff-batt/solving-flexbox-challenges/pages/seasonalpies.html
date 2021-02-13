@@ -6,7 +6,7 @@
     <meta name="author" content="Bethany's Pie Shop" />
     <meta name="description" content="Store front for Bethany's Pie Shop" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
   </head>
 
@@ -35,50 +35,32 @@
           <a href="seasonalpies.html"><li>Seasonal pies</li></a>
         </ul>
       </aside>
-      <main class="main">
-        <table
-          border="1"
-          style="
-            width: 100%;
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 20px;
-            border-spacing: 5px;
-          "
-        >
-          <caption>
-            Our delicious selection of pies for you to enjoy!
-          </caption>
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Pie name</th>
-              <th>Description</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <img src="../images/products/pumpkinpiesmall.jpg" width="100" />
-              </td>
-              <td>Pumpkin pie</td>
-              <td>Our Halloween favourite</td>
-              <td>£18.95</td>
-            </tr>
-            <tr>
-              <td>
-                <img
-                  src="../images/products/christmasapplepiesmall.jpg"
-                  width="100"
-                />
-              </td>
-              <td>Christmas apple pie</td>
-              <td>Happy holidays with this pie!</td>
-              <td>£19.95</td>
-            </tr>
-          </tbody>
-        </table>
+      <main class="pieGallery">
+        <div class="pieCard">
+          <img
+            src="../images/products/pumpkinpiesmall.jpg"
+            width="100"
+            height="63"
+          />
+          <div class="cardRow">
+            <h5>Pumpkin pie</h5>
+            <small>£18.95</small>
+          </div>
+          <p>Our Halloween favourite</p>
+        </div>
+
+        <div class="pieCard">
+          <img
+            src="../images/products/christmasapplepiesmall.jpg"
+            width="100"
+            height="63"
+          />
+          <div class="cardRow">
+            <h5>Christmas apple pie</h5>
+            <small>£19.95</small>
+          </div>
+          <p>Happy holidays with this pie!</p>
+        </div>
       </main>
 
       <footer>
