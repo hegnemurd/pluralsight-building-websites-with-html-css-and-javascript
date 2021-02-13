@@ -42,6 +42,60 @@ nav > ul > li a {
 
 /*Side Menu*/
 
+.leftmenu ul {
+  padding-inline-start: 0;
+  margin-right: 0;
+}
+
+.leftmenu ul > a > li {
+  background-color: #cf4522;
+  color: #fff;
+  list-style: none;
+  padding: 14px 45px;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.leftmenu ul > a > li:hover {
+  background-color: #b43110;
+}
+
+.leftmenu ul > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.leftMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Main Content*/
+
+.mainContent {
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* background-color: blue;
+  height: 600px;
+  align-content: space-between; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 
+.mainContent ul > a > li:hover {
+  background-color: #b43110;
+}
+
+.mainContent ul > a {
+  text-decoration: none;
+  color: #fff;
+} 
+
 .mainContent ul {
   padding-inline-start: 0;
   margin-right: 0;
@@ -57,48 +111,89 @@ nav > ul > li a {
   cursor: pointer;
   margin-bottom: 2px;
 }
+ */
 
-.mainContent ul > a > li:hover {
-  background-color: #b43110;
+.pageTitle {
+  font-size: 35px;
+  color: #a593c2;
 }
 
-.mainContent ul > a {
-  text-decoration: none;
-  color: #fff;
+.centerImage {
+  align-self: flex-end;
 }
 
-.mainContent {
-  margin-left: auto;
-  margin-right: auto;
+/*Pie Rows*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+}
+
+.pieRow {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
-  /* background-color: blue;
-  height: 600px;
-  align-content: space-between; */
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding-right: 0.5rem;
+}
+
+.pieRow h5,
+.pieRow p {
+  margin: 0;
+}
+
+.pieRow > div {
+  flex-grow: 2;
+  padding-left: 0.5rem;
+}
+
+.pieRow > small {
+  flex-shrink: 3;
 }
 
 .pieGallery {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  flex-basis: 60%;
   flex-wrap: wrap;
   align-content: flex-start;
 }
 
 .pieCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: column wrap;
   margin: 0.4rem;
   /* align-items: center; */
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 0.4rem;
+  padding: 0.5rem;
+  flex-grow: 2;
 }
 
 .pieCard > h5,
 .pieCard > p {
   margin: 0.2rem 0;
+}
+
+.pieCard > img {
+  align-self: center;
+}
+
+#promos {
+  align-self: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+
+#promos > h3 {
+  margin: 5px 0;
 }
 
 .cardRow {
@@ -108,16 +203,55 @@ nav > ul > li a {
   align-items: center;
 }
 
-.cardRow > h5,
+/* .cardRow > h5,
 .cardRow > p {
   margin: 0.2rem 0;
-}
-/*Main Content*/
+} */
 
-.pageTitle {
-  font-size: 35px;
-  color: #a593c2;
+/*About*/
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Footer*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+footer > p,
+footer > address {
+  margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .leftMenu {
+    order: 1;
+  }
+  .main {
+    flex-basis: 90% !important;
+  }
+  .pieGallery {
+    flex-basis: 90% !important;
+  }
+}
+
+/*Test*/
 
 .box {
   width: 200px;
@@ -126,35 +260,6 @@ nav > ul > li a {
   margin: 5px 10px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-.pieRow {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.leftMenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*Footer*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer > p,
-footer > address {
-  margin: 0.5rem 0;
-}
+/* .box:nth-child(1) {
+  order: 15;
+} */
