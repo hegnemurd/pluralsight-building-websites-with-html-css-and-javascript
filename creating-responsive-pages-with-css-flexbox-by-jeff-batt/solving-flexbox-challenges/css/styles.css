@@ -1,4 +1,4 @@
-/*Main Area*/
+/* Main Area*/
 body {
   margin-top: 0px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,12 +26,11 @@ nav > ul {
   padding: 0;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 
 nav > ul > li:nth-child(1) {
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 /* nav > ul > li {
@@ -39,6 +38,7 @@ nav > ul > li:nth-child(1) {
 } */
 
 nav > ul > li a {
+  display: block;
   color: white;
   text-align: center;
   padding: 16px;
@@ -81,43 +81,11 @@ nav > ul > li a {
 /*Main Content*/
 
 .mainContent {
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* background-color: blue;
-  height: 600px;
-  align-content: space-between; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-/* 
-.mainContent ul > a > li:hover {
-  background-color: #b43110;
-}
-
-.mainContent ul > a {
-  text-decoration: none;
-  color: #fff;
-} 
-
-.mainContent ul {
-  padding-inline-start: 0;
-  margin-right: 0;
-  padding: 0.7rem;
-}
-
-.mainContent ul > a > li {
-  background-color: #cf4522;
-  color: #fff;
-  list-style: none;
-  padding: 14px 25px;
-  display: block;
-  cursor: pointer;
-  margin-bottom: 2px;
-}
- */
 
 .pageTitle {
   font-size: 35px;
@@ -140,7 +108,6 @@ nav > ul > li a {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   align-items: center;
   background-color: #fff;
@@ -162,10 +129,6 @@ nav > ul > li a {
   flex-shrink: 3;
 }
 
-small {
-  padding: 0.3rem;
-}
-
 .pieGallery {
   display: flex;
   flex-direction: row;
@@ -174,20 +137,22 @@ small {
   align-content: flex-start;
 }
 
+.pieGallery > .pieCard:nth-child(1) {
+  flex-basis: 100%;
+}
+
 .pieCard {
   display: flex;
-  /* flex-direction: column wrap; */
+  flex-flow: column wrap;
   margin: 0.4rem;
-  align-items: center;
-  align-content: space-between;
+  padding: 0.5rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
   flex-grow: 2;
 }
 
-.pieCard > h5,
-.pieCard > p {
+.pieCard h5,
+.pieCard p {
   margin: 0.2rem 0;
 }
 
@@ -204,21 +169,15 @@ small {
 }
 
 #promos > h3 {
-  margin: 5px 0;
+  margin: 0;
 }
 
 .cardRow {
-  padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
-/* .cardRow > h5,
-.cardRow > p {
-  margin: 0.2rem 0;
-} */
 
 /*About*/
 
@@ -253,7 +212,7 @@ footer > address {
 
 @media screen and (max-width: 600px) {
   .leftMenu {
-    order: 1;
+    order: 2;
   }
   .main {
     flex-basis: 90% !important;
@@ -271,7 +230,3 @@ footer > address {
   background-color: red;
   margin: 5px 10px;
 }
-
-/* .box:nth-child(1) {
-  order: 15;
-} */
