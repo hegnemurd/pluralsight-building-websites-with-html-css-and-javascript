@@ -207,13 +207,19 @@
               origin: from,
               destination: to,
               travelMode: "DRIVING",
+              avoidHighways: true,
+              provideRouteAlternatives: true,
             },
             function (response, status) {
               if (status === "OK") {
                 directionsRenderer.setDirections(response);
-
                 // Render directions on the map
                 directionsRenderer.setMap(map);
+
+                // Call setPanel() to display text directions
+                directionsRenderer.setPanel(
+                  document.getElementById("directionsArea")
+                );
               } else {
                 displayError("Directions request failed due to " + status);
               }
