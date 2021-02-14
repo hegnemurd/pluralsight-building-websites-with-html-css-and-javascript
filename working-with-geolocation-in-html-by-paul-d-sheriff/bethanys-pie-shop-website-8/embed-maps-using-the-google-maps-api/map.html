@@ -77,6 +77,7 @@
           title: "Bethany's Pie Shop",
           infoContent:
             "<div class='info-window'><address>Bethany's Pie Shop<br/>117 Franklin Rd<br/>Brentwood, TN 37027</address></div>",
+          infoIcon: "images/cherrypie.jpg",
         };
 
         // ************************************
@@ -114,6 +115,7 @@
             position: new google.maps.LatLng(mapObject.lat, mapObject.lng),
             map: map,
             title: mapObject.title,
+            icon: mapObject.infoIcon,
           });
 
           // Add marker to the map
