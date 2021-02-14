@@ -39,15 +39,20 @@
       <main id="main">
         <div id="map" class="map"></div>
         <br />
+        <button onclick="gmapController.addUserLocation()">
+          Where Are You?
+        </button>
+        <br />
         <label>Address: </label>
         <input
           id="address"
           type="text"
-          value="1 Cadillac Drive, Brentwood TN 37027"
+          value="307 Garrett Drive, Nashville TN 32711"
         />
         <button onclick="gmapController.getDirections()">
           Directions From Address
         </button>
+        <div id="directionsArea"></div>
 
         <div id="errorArea" class="alert d-none"></div>
       </main>
@@ -181,6 +186,11 @@
               });
 
               drawMapObjects();
+
+              getDirections(
+                new google.maps.LatLng(mapObjects[1].lat, mapObjects[1].lng),
+                new google.maps.LatLng(mapObjects[0].lat, mapObjects[0].lng)
+              );
             });
           } else {
             displayError("Please update your browser to use Geolocation.");
@@ -201,6 +211,7 @@
             function (response, status) {
               if (status === "OK") {
                 directionsRenderer.setDirections(response);
+
                 // Render directions on the map
                 directionsRenderer.setMap(map);
               } else {
