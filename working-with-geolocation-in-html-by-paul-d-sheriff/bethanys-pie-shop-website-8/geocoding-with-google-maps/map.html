@@ -86,6 +86,8 @@
         let map = null;
         let infoWindow = null;
         let mapObjects = [];
+        let addrMarker = null;
+        let deliveryArea = null;
         let deliveryMeters = {
           north: 400,
           south: 1600,
@@ -176,7 +178,7 @@
           );
 
           // Draw the rectangle on the map
-          new google.maps.Rectangle({
+          deliveryArea = new google.maps.Rectangle({
             map: map,
             bounds: bounds,
             strokeColor: "red",
@@ -274,6 +276,80 @@
           );
         }
 
+        function setMarkerOnAddress(address) {
+          var geocoder = new google.maps.Geocoder();
+
+          if (address.length > 0) {
+            geocoder.geocode({ address: address }, function (results, status) {
+              switch (status) {
+                case google.maps.GeocoderStatus.OK:
+                  if (results[0]) {
+                    let mapObject = {
+                      lat: results[0].geometry.location.lat(),
+                      lng: results[0].geometry.location.lng(),
+                      marker: null,
+                      title: address,
+                      infoContent: null,
+                      infoIcon: null,
+                    };
+                    // Remove any previous address marker
+                    if (addrMarker) {
+                      addrMarker.setMap(null);
+                    }
+
+                    // Set marker on map
+                    addrMarker = drawMarker(mapObject);
+
+                    // Get existing map boundaries
+                    let bounds = map.getBounds();
+
+                    // Extend boundaries to encompass new marker
+                    bounds.extend(addrMarker.position);
+
+                    // Make sure rectangle is displayed on the map
+                    map.fitBounds(bounds);
+
+                    // Check if marker is within delivery address
+                    if (
+                      !deliveryArea.getBounds().contains(addrMarker.position)
+                    ) {
+                      displayError("Address is NOT in delivery area");
+                    }
+                  } else {
+                    displayError("Could not locate address.");
+                  }
+                  break;
+
+                case google.maps.GeocoderStatus.ZERO_RESULTS:
+                  displayError("No such address found.");
+                  break;
+
+                case google.maps.GeocoderStatus.OVER_QUERY_LIMIT:
+                  displayError("Query limit has been exceeded.");
+                  break;
+
+                case google.maps.GeocoderStatus.REQUEST_DENIED:
+                  displayError("Query request was denied.");
+                  break;
+
+                case google.maps.GeocoderStatus.INVALID_REQUEST:
+                  displayError("Query request was invalid.");
+                  break;
+
+                default:
+                  displayError("Unknown status: " + status);
+                  break;
+              }
+            });
+          } else {
+            displayError("Please enter an address.");
+          }
+        }
+
+        function displayError(msg) {
+          alert(msg);
+        }
+
         // ************************************
         // Public Functions
         // ************************************
@@ -285,6 +361,9 @@
               document.getElementById("address").value,
               "117 Franklin Rd, Brentwood TN 37027"
             );
+          },
+          setMarkerOnAddress: function () {
+            setMarkerOnAddress(document.getElementById("address").value);
           },
         };
       })();
