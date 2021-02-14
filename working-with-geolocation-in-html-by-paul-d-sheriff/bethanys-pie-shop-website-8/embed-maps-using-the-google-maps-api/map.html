@@ -38,6 +38,10 @@
       </aside>
       <main id="main">
         <div id="map" class="map"></div>
+        <br />
+        <button onclick="gmapController.addUserLocation()">
+          Where Are You?
+        </button>
 
         <div id="errorArea" class="alert d-none"></div>
       </main>
@@ -70,54 +74,51 @@
         // ************************************
         let map = null;
         let infoWindow = null;
-        let bethanyMap = {
-          lat: 36.03602,
-          lng: -86.7876,
-          marker: null,
-          title: "Bethany's Pie Shop",
-          infoContent:
-            "<div class='info-window'><address>Bethany's Pie Shop<br/>117 Franklin Rd<br/>Brentwood, TN 37027</address></div>",
-          infoIcon: "images/cherrypie.jpg",
-        };
-        let userMap = {
-          marker: null,
-          lat: 36.0364274,
-          lng: -86.7968576,
-          title: "Your Location",
-          infoContent:
-            "<div class='info-window'><p>This is your current location.</p></div>",
-          infoIcon: "images/walking.jpg",
-        };
+        let mapObjects = [];
 
         // ************************************
         // Private Functions
         // ************************************
         function initialize() {
-          // Create a lat/lng boundary
-          let bounds = new google.maps.LatLngBounds();
-
           // Create new InfoWindow object
           infoWindow = new google.maps.InfoWindow();
 
+          // Add pie shop object
+          mapObjects.push({
+            lat: 36.03602,
+            lng: -86.7876,
+            marker: null,
+            title: "Bethany's Pie Shop",
+            infoContent:
+              "<div class='info-window'><address>Bethany's Pie Shop<br/>117 Franklin Rd<br/>Brentwood, TN 37027</address></div>",
+            infoIcon: "images/cherrypie.jpg",
+          });
+
           // Draw the map
-          drawMap(bethanyMap);
+          drawMap(mapObjects[0]);
 
-          // Add marker for pie shop
-          bethanyMap.marker = drawMarker(bethanyMap);
-          // Add info window for pie shop
-          addInfoWindow(bethanyMap);
-          // Extend boundaries to encompass marker
-          bounds.extend(bethanyMap.marker.position);
+          // Draw other map objects
+          drawMapObjects();
+        }
 
-          // Add marker for user's location
-          userMap.marker = drawMarker(userMap);
-          // Add info window for user's location
-          addInfoWindow(userMap);
-          // Extend boundaries to encompass marker
-          bounds.extend(userMap.marker.position);
+        function drawMapObjects() {
+          // Create a lat/lng boundary
+          let bounds = new google.maps.LatLngBounds();
+          let i;
+
+          for (i = 0; i < mapObjects.length; i++) {
+            // Add marker for map object
+            mapObjects[i].marker = drawMarker(mapObjects[i]);
+            // Add info window for map object
+            addInfoWindow(mapObjects[i]);
+            // Extend boundaries to encompass marker
+            bounds.extend(mapObjects[i].marker.position);
+          }
 
           // Fit the map to boundaries
-          map.fitBounds(bounds);
+          if (mapObjects.length > 1) {
+            map.fitBounds(bounds);
+          }
         }
 
         function drawMap(mapObject) {
@@ -157,11 +158,34 @@
           });
         }
 
+        function addUserLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (pos) {
+              mapObjects.push({
+                // "lat": pos.coords.latitude,
+                // "lng": pos.coords.longitude,
+                lat: 36.0364274,
+                lng: -86.7968576,
+                marker: null,
+                title: "Your Location",
+                infoContent:
+                  "<div class='info-window'><p>This is your current location.</p></div>",
+                infoIcon: "images/walking.jpg",
+              });
+
+              drawMapObjects();
+            });
+          } else {
+            displayError("Please update your browser to use Geolocation.");
+          }
+        }
+
         // ************************************
         // Public Functions
         // ************************************
         return {
           initialize: initialize,
+          addUserLocation: addUserLocation,
         };
       })();
     </script>
