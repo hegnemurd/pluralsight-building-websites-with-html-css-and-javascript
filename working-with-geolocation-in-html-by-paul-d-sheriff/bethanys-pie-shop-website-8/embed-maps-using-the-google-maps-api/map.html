@@ -69,22 +69,31 @@
         // Private Variables
         // ************************************
         let map = null;
+        let infoWindow = null;
         let bethanyMap = {
           lat: 36.03602,
           lng: -86.7876,
           marker: null,
           title: "Bethany's Pie Shop",
+          infoContent:
+            "<div class='info-window'><address>Bethany's Pie Shop<br/>117 Franklin Rd<br/>Brentwood, TN 37027</address></div>",
         };
 
         // ************************************
         // Private Functions
         // ************************************
         function initialize() {
+          // Create new InfoWindow
+          infoWindow = new google.maps.InfoWindow();
+
           // Draw the map
           drawMap(bethanyMap);
 
           // Add marker for pie shop
           bethanyMap.marker = drawMarker(bethanyMap);
+
+          // Add info window for pie shop
+          addInfoWindow(bethanyMap);
         }
 
         function drawMap(mapObject) {
@@ -109,9 +118,18 @@
 
           // Add marker to the map
           marker.setMap(map);
-          // marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
 
           return marker;
+        }
+
+        function addInfoWindow(mapObject) {
+          // Add click event to marker
+          google.maps.event.addListener(mapObject.marker, "click", function () {
+            // Add HTML content for window
+            infoWindow.setContent(mapObject.infoContent);
+            // Open the window
+            infoWindow.open(map, mapObject.marker);
+          });
         }
 
         // ************************************
