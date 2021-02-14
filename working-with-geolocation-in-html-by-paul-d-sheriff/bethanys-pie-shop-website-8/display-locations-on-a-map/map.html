@@ -4,6 +4,17 @@
     <meta charset="utf-8" />
     <title>Directions to Bethany's Pie Shop!</title>
     <link rel="stylesheet" type="text/css" href="styles/site.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
+      type="text/css"
+    />
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
   </head>
 
   <body>
@@ -14,7 +25,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#">All pies</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#" onclick="drawMap();">Map</a></li>
+          <li><a href="map.html">Map</a></li>
         </ul>
       </nav>
     </header>
@@ -36,7 +47,9 @@
 
         <input type="search" class="searchbox" placeholder="Search our store" />
       </aside>
-      <main id="main"></main>
+      <main id="main">
+        <div id="map" class="map"></div>
+      </main>
 
       <footer>
         <p>Our address is</p>
@@ -52,6 +65,57 @@
         </p>
       </footer>
     </div>
-    <script src="./scripts/geoController.js"></script>
+    <!-- <script src="./scripts/geoController.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"></script>
+    <script>
+      "use strict";
+
+      let map = null;
+      let bethanyMap = {
+        latitude: 36.03602,
+        longitude: -86.7876,
+      };
+
+      window.onload = function () {
+        drawMap(bethanyMap);
+      };
+
+      function drawMap(mapObject) {
+        // Create new Open Layer map
+        map = new ol.Map({
+          target: "map",
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM(),
+            }),
+          ],
+          view: new ol.View({
+            center: ol.proj.fromLonLat([
+              mapObject.longitude,
+              mapObject.latitude,
+            ]),
+            zoom: 18,
+          }),
+        });
+
+        drawMarker(mapObject);
+      }
+
+      function drawMarker(mapObject) {
+        // Add a "marker" on the pie shop
+        let layer = new ol.layer.Vector({
+          source: new ol.source.Vector({
+            features: [
+              new ol.Feature({
+                geometry: new ol.geom.Point(
+                  ol.proj.fromLonLat([mapObject.longitude, mapObject.latitude])
+                ),
+              }),
+            ],
+          }),
+        });
+        map.addLayer(layer);
+      }
+    </script>
   </body>
 </html>
