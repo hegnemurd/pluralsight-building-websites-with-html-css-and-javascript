@@ -79,12 +79,24 @@
             "<div class='info-window'><address>Bethany's Pie Shop<br/>117 Franklin Rd<br/>Brentwood, TN 37027</address></div>",
           infoIcon: "images/cherrypie.jpg",
         };
+        let userMap = {
+          marker: null,
+          lat: 36.0364274,
+          lng: -86.7968576,
+          title: "Your Location",
+          infoContent:
+            "<div class='info-window'><p>This is your current location.</p></div>",
+          infoIcon: "images/walking.jpg",
+        };
 
         // ************************************
         // Private Functions
         // ************************************
         function initialize() {
-          // Create new InfoWindow
+          // Create a lat/lng boundary
+          let bounds = new google.maps.LatLngBounds();
+
+          // Create new InfoWindow object
           infoWindow = new google.maps.InfoWindow();
 
           // Draw the map
@@ -92,9 +104,20 @@
 
           // Add marker for pie shop
           bethanyMap.marker = drawMarker(bethanyMap);
-
           // Add info window for pie shop
           addInfoWindow(bethanyMap);
+          // Extend boundaries to encompass marker
+          bounds.extend(bethanyMap.marker.position);
+
+          // Add marker for user's location
+          userMap.marker = drawMarker(userMap);
+          // Add info window for user's location
+          addInfoWindow(userMap);
+          // Extend boundaries to encompass marker
+          bounds.extend(userMap.marker.position);
+
+          // Fit the map to boundaries
+          map.fitBounds(bounds);
         }
 
         function drawMap(mapObject) {
