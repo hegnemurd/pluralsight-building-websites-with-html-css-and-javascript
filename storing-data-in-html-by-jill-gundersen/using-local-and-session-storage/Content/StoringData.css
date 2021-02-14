@@ -1,0 +1,23 @@
+.storageContainer > div:last-child button:not(:nth-child(1)) {margin-top: 1em;}
+
+.container {width: 600px; margin-top: 100px;}
+.storageContainer {background:#F4F4F4;}
+.getText { color: #F05A28; font-weight: bold; padding-top: 5px; height: 38px;  }
+.getLoopText {padding-top: 5px; }
+
+/* buttons */
+.setButton { background: #2A9FBC; color: #FFF; width: 100%;}
+.setButton:hover { background: #1F778D; color: #FFF; }
+ 
+.getButton {background: #404040; color:#FFF; width: 100%;}
+.getButton:hover {background: #303030; color:#FFF; }
+
+
+.loopButton {background: #A62E5C; color:#FFF; width: 100%; }
+.loopButton:hover {background: #7D2345; color:#FFF; }
+
+.clearButton {background: #9BC850; color:#FFF; width: 100%; }
+.clearButton:hover {background: #77A032; color:#FFF;  }
+
+.removeButton {background: #675BA7; color:#FFF; width: 100%; }
+.removeButton:hover {background: #4D447E; color:#FFF; width: 100%; }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Storing Data in HTML - Set Data</title>
+
+    <link href="Content/Bootstrap.css" rel="stylesheet" />
+    <link href="Content/StoringData.css" rel="stylesheet" />
+    <script type="text/javascript">
+      //--- Set Storage ---
+      function setLocalStorage() {
+        let data = document.getElementById("localData").value;
+        localStorage.setItem("myLocalData", data);
+
+        document.getElementById("localData").value = "";
+      }
+
+      function setSessionStorage() {
+        let data = document.getElementById("sessionData").value;
+        sessionStorage.setItem("mySessionData", data);
+
+        document.getElementById("sessionData").value = "";
+      }
+
+      // --- end ---
+
+      // --- Get Storage ---
+
+      function getLocalStorage() {
+        document.getElementById(
+          "localStorageValue"
+        ).textContent = localStorage.getItem("myLocalData");
+      }
+
+      function getSessionStorage() {
+        document.getElementById(
+          "sessionStorageValue"
+        ).textContent = sessionStorage.getItem("mySessionData");
+      }
+
+      // --- end ---
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h4>Local Storage</h4>
+      <div class="p-4 mb-5 storageContainer">
+        <div class="row mb-3">
+          <div class="col-8">
+            <input type="text" class="form-control mr-2" id="localData" />
+          </div>
+          <div class="col-4">
+            <button
+              class="btn setButton"
+              type="button"
+              onclick="setLocalStorage()"
+            >
+              Set Local Data
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="btn getButton" onclick="getLocalStorage()">
+              Get Local Data
+            </button>
+          </div>
+          <div class="col pl-5">
+            <div class="getText" id="localStorageValue"></div>
+          </div>
+        </div>
+      </div>
+      <h4>Session Storage</h4>
+      <div class="p-4 storageContainer">
+        <div class="row mb-3">
+          <div class="col-8">
+            <input type="text" class="form-control mr-2" id="sessionData" />
+          </div>
+          <div class="col-4">
+            <button
+              class="btn setButton"
+              type="button"
+              onclick="setSessionStorage()"
+            >
+              Set Session Data
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <button class="btn getButton" onclick="getSessionStorage()">
+              Get Session Data
+            </button>
+          </div>
+          <div class="col pl-5">
+            <div class="getText" id="sessionStorageValue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
