@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Storing Data in HTML - Remove Data</title>
+    <link href="Content/Bootstrap.css" rel="stylesheet" />
+    <link href="Content/StoringData.css" rel="stylesheet" />
+    <script type="text/javascript">
+      // --- Set JSON Data ---
+
+      function setJsonLocalStorage() {
+        let simpleJson = {
+          fruits: [
+            { name: "Blueberries", color: "blue" },
+            { name: "Kiwi", color: "green" },
+            { name: "Lemon", color: "yellow" },
+            { name: "Strawberries", color: "red" },
+            { name: "Mango", color: "yellow" },
+            { name: "Apple", colore: "red" },
+          ],
+          vegetables: [
+            { name: "Cucumber", color: "gree" },
+            { name: "Carrot", color: "orange" },
+            { name: "Cauliflower", color: "white" },
+            { name: "Potato", color: "brown" },
+          ],
+        };
+
+        console.log(simpleJson);
+
+        localStorage.setItem("fruitsAndVeggies", JSON.stringify(simpleJson));
+      }
+
+      //--- end ---
+
+      // --- Get JSON Data ---
+
+      function getJsonLocalStorage() {
+        let fromStorage = localStorage.getItem("fruitsAndVeggies");
+        let backToJson = JSON.parse(fromStorage);
+
+        console.log(fromStorage);
+        console.log(backToJson);
+
+        document.getElementById("localStorageValue").textContent =
+          backToJson.fruits[4].name + ": " + backToJson.fruits[4].color;
+      }
+
+      // --- end ---
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h4>Local Storage</h4>
+      <div class="p-4 mb-5 storageContainer">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn getButton" onclick="setJsonLocalStorage()">
+              Set JSON Data
+            </button>
+            <button class="btn loopButton" onclick="getJsonLocalStorage()">
+              Get JSON Data
+            </button>
+          </div>
+          <div class="col-6">
+            <div class="getText mb-3" id="localStorageValue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
