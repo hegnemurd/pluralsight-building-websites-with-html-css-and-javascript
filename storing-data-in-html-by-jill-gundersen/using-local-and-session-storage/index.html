@@ -96,6 +96,42 @@
       }
 
       // --- end ---
+
+      // --- Remove Storage ---
+
+      function removeLocalStorage() {
+        localStorage.removeItem("myLocalData");
+
+        getLocalStorage();
+        loopThroughLocalStorage();
+      }
+
+      function removeSessionStorage() {
+        sessionStorage.removeItem("mySessionData");
+
+        getSessionStorage();
+        loopThroughSessionStorage();
+      }
+
+      // --- end ---
+
+      // --- Clear Storage ---
+
+      function clearLocalStorage() {
+        localStorage.clear();
+
+        getLocalStorage();
+        loopThroughLocalStorage();
+      }
+
+      function clearSessionStorage() {
+        sessionStorage.clear();
+
+        getSessionStorage();
+        loopThroughSessionStorage();
+      }
+
+      // --- end ---
     </script>
   </head>
   <body>
@@ -123,6 +159,12 @@
             </button>
             <button class="btn loopButton" onclick="loopThroughLocalStorage()">
               Get All Local Data
+            </button>
+            <button class="btn removeButton" onclick="removeLocalStorage()">
+              Remove Local Data
+            </button>
+            <button class="btn clearButton" onclick="clearLocalStorage()">
+              Clear All Local Data
             </button>
           </div>
           <div class="col pl-5">
@@ -157,6 +199,12 @@
               onclick="loopThroughSessionStorage()"
             >
               Get All Session Data
+            </button>
+            <button class="btn removeButton" onclick="removeSessionStorage()">
+              Remove Session Data
+            </button>
+            <button class="btn clearButton" onclick="clearSessionStorage()">
+              Clear All Session Data
             </button>
           </div>
           <div class="col pl-5">
