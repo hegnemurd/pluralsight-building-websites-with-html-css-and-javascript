@@ -10,11 +10,26 @@
     <link href="Content/StoringData.css" rel="stylesheet" />
     <script type="text/javascript">
       //--- Set Storage ---
+
       function setLocalStorage() {
         let data = document.getElementById("localData").value;
         localStorage.setItem("myLocalData", data);
 
         document.getElementById("localData").value = "";
+
+        //-- Adding some more data. Books!
+        let addData = [
+          "Binary New World",
+          "Infinite Loop",
+          "The Hex Files",
+          "Jane Error",
+          "Catch 10110",
+          "Lord of the Files",
+        ];
+
+        for (let i = 0; i < addData.length; i++) {
+          localStorage.setItem("Book " + (i + 1), addData[i]);
+        }
       }
 
       function setSessionStorage() {
@@ -22,6 +37,20 @@
         sessionStorage.setItem("mySessionData", data);
 
         document.getElementById("sessionData").value = "";
+
+        //-- Adding some more data. Pizza, Yum!
+        let addData = [
+          "Pepperoni",
+          "Cheese",
+          "Sausage",
+          "Supreme",
+          "Ham and Pineapple",
+          "Vegetable",
+        ];
+
+        for (let i = 0; i < addData.length; i++) {
+          sessionStorage.setItem("Pizza Choice " + (i + 1), addData[i]);
+        }
       }
 
       // --- end ---
@@ -38,6 +67,32 @@
         document.getElementById(
           "sessionStorageValue"
         ).textContent = sessionStorage.getItem("mySessionData");
+      }
+
+      // --- end ---
+
+      // --- Loop Through All Storage ---
+
+      function loopThroughLocalStorage() {
+        //document.getElementById("localStorageAllData").textContent = localStorage.key(2);
+        //document.getElementById("localStorageAllData").textContent = localStorage.getItem(localStorage.key(i));
+        let dataHtml = "";
+        for (var i = 0; i < localStorage.length; i++) {
+          dataHtml +=
+            "<p>" + localStorage.getItem(localStorage.key(i)) + "</p>";
+        }
+        document.getElementById("localStorageAllData").innerHTML = dataHtml;
+      }
+
+      function loopThroughSessionStorage() {
+        //document.getElementById("sessionStorageAllData").textContent = sessionStorage.key(2);
+        //document.getElementById("sessionStorageAllData").textContent = sessionStorage.getItem(sessionStorage.key(i));
+        let dataHtml = "";
+        for (var i = 0; i < sessionStorage.length; i++) {
+          dataHtml +=
+            "<p>" + sessionStorage.getItem(sessionStorage.key(i)) + "</p>";
+        }
+        document.getElementById("sessionStorageAllData").innerHTML = dataHtml;
       }
 
       // --- end ---
@@ -66,9 +121,13 @@
             <button class="btn getButton" onclick="getLocalStorage()">
               Get Local Data
             </button>
+            <button class="btn loopButton" onclick="loopThroughLocalStorage()">
+              Get All Local Data
+            </button>
           </div>
           <div class="col pl-5">
-            <div class="getText" id="localStorageValue"></div>
+            <div class="getText mb-3" id="localStorageValue"></div>
+            <div class="getLoopText" id="localStorageAllData"></div>
           </div>
         </div>
       </div>
@@ -93,9 +152,16 @@
             <button class="btn getButton" onclick="getSessionStorage()">
               Get Session Data
             </button>
+            <button
+              class="btn loopButton"
+              onclick="loopThroughSessionStorage()"
+            >
+              Get All Session Data
+            </button>
           </div>
           <div class="col pl-5">
-            <div class="getText" id="sessionStorageValue"></div>
+            <div class="getText mb-3" id="sessionStorageValue"></div>
+            <div class="getLoopText" id="sessionStorageAllData"></div>
           </div>
         </div>
       </div>
