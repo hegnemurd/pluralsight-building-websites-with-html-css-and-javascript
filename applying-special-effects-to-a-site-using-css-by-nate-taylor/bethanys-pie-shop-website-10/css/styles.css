@@ -26,6 +26,52 @@ img {
   border-radius: 1%;
 }
 
+.logo {
+  transition: transform 1s;
+}
+
+.logo.load {
+  transform: translate(500px, 100px);
+  /* animation: 3s spin 1.25s forwards linear; */
+  animation-name: spin, fade;
+  animation-duration: 3s, 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(500px, 100px) rotate(0deg);
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.5;
+  }
+
+  35% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /************
 Nav-bar
 *************/
