@@ -29,8 +29,8 @@
   },
   {
     "pieID": 5,
-    "name": "Cheese cake",
-    "description": "Plain cheese cake. Meh.",
+    "name": "Cheesecake",
+    "description": "Plain cheesecake. Meh.",
     "imageURL": "images/products/cheesecakesmall.jpg",
     "price": 12.95
 },
@@ -50,7 +50,7 @@
   },
   {
     "pieID": 8,
-    "name": "Blueberry cheese cake",
+    "name": "Blueberry cheesecake",
     "description": "Better than the plain one!",
     "imageURL": "images/products/blueberrycheesecakesmall.jpg",
     "price": 17.95
@@ -71,7 +71,7 @@
   },
   {
     "pieID": 11,
-    "name": "Strawberry Cheese Cake",
+    "name": "Strawberry cheesecake",
     "description": "Also better than plain!",
     "imageURL": "images/products/strawberrycheesecakesmall.jpg",
     "price": 21.95
